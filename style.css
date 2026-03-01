@@ -1,0 +1,363 @@
+body{
+    background-color: #F8FAFC;
+    /* /* max-width: 1600px; */
+    
+    }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: geist;;
+}
+.frist{
+    max-width: 70%;
+    margin: auto;
+    /* border: solid 1px red; */
+    padding: 40px 0px 20px 0px;
+}
+
+#Job-Application{
+    color: #002C5C;
+    padding-bottom: 30px;
+}
+.counter-aria{
+    display: flex;
+}
+.Total{
+    width: 33%;
+    /* height: 30px; */
+    background-color: white;
+    padding: 20px  20px 20px;
+    margin-left: 10px;  
+    border-radius: 7px;  
+}
+.p-tag{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  /* margin-bottom: 15px; */
+  color: #323B49;
+  /* background-color: transparent; */
+}
+#Total-number{
+      font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #002C5C;
+    /* background-color: transparent; */
+
+}
+#Interview-number{
+      font-size: 24px;
+  font-weight: bold;
+  line-height: auto;
+  color: #10B981;
+    background-color: transparent;
+
+}
+#Rejected-number{
+      font-size: 24px;
+  font-weight: bold;
+  line-height: auto;
+  color: #EF4444;
+    background-color: transparent;
+
+}
+.Available{
+    display: flex;
+    justify-content: space-between;
+}
+.AvailableJObs{
+    margin-bottom: 10px;
+}
+.tab-div{
+    display: flex;
+    gap: 15px;
+}
+.tab{
+    background-color: white;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+
+}
+.tabActive{
+  background-color: #3B82F6;
+    color: white;
+
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    margin: 20px 0 10px 0;
+    background-color: #FFFFFF;
+    /* border: solid 2px red; */
+    padding: 15px;
+    border-radius: 9px;
+    column-gap: 10px;
+}
+.job-title{
+     font-size: 24px;
+  font-weight: 500;
+  line-height: auto;
+  color: #002C5C;
+  margin-bottom: 5px;
+}
+.job-dis{
+     font-size: 16px;
+  font-weight: 500;
+  line-height: auto;
+  color: #64748B;
+}
+.job-fesiliti{
+     font-size: 16px;
+  font-weight: 500;
+  line-height: auto;
+  color: #64748B;
+  padding: 15px 0;
+}
+.notapplied{
+    color: #002C5C;
+    border-radius: 4px;
+    background-color: #EEF4FF;
+    padding: 8px;
+    border: none;
+}
+.extraDesc{
+    font-size: 16px;
+  font-weight: 500;
+  line-height: auto;
+  color: #64748B;
+  padding: 15px 0;
+}
+.btn-interview {
+    color: #10B981;
+    border: solid #10B981 1px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+.btn-interview:hover{
+    background-color: #10B981;
+    color: white;
+}
+.btn-Rejected{
+    color: #EF4444;
+    border: solid 1px #EF4444;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: transparent;
+}
+.btn-Rejected:hover{
+    background-color: #EF4444;
+    color: white;
+}
+
+.not{
+    background-color: #FFFFFF;
+    padding: 100px 20px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    display: none;
+
+}
+.notJOb{
+
+}
+.notJOb h2{
+    color: #002C5C;
+    font-size: 24px;
+    line-height: auto;
+}
+.notJOb p{
+    color: #64748B;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: auto;
+}
+
+
+@media screen and (max-width: 570px){
+    .frist{
+    max-width: 90%;
+    margin: auto;
+    }
+    #Job-Application {
+    font-size: 26px;
+    color: #002C5C;
+    padding-bottom: 20px;
+}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    
+let cards = document.getElementsByClassName('card');
+for(let i = 0; i <= cards.length; i++){
+   console.log(i);
+   const Total = document.getElementById('Total-number');
+Total.innerText = i;
+const joblist = document.getElementById('av-jobs-list');
+joblist.innerText = i;
+};
+
+
+let interview = document.getElementsByClassName('inter');
+for(let f = 0; f <= interview.length; f++){
+   const totalinter = document.getElementById('Interview-number');
+   totalinter.innerText = f;
+};
+
+
+
+let rejeccount = document.getElementsByClassName('reje');
+for(let i = 0; i <= rejeccount.length; i++){
+   const total = document.getElementById('Rejected-number');
+   total.innerText = i;
+   console.log(rejeccount[i]);
+};
+
+
+
+////Tab section/////////
+document.getElementById('tab-all').addEventListener('click',function(){
+   const all = document.getElementsByClassName('card');
+  for(let i = 0; i < all.length; i++){
+   all[i].style.display = "block";
+  }
+   
+
+})
+
+
+// // /interview//
+document.getElementById('tab-inter').addEventListener('click',function(){
+
+  const show = document.getElementsByClassName('card');
+  for(let i =0; i < show.length; i++){
+      // console.log(i);
+       show[i].style.display = "none";
+
+      const deka = document.getElementsByClassName('inter');
+      for(let j = 0; j < deka.length; j++){
+         deka[j].style.display = "block";
+      }
+
+
+}
+})
+     
+// rejected////
+
+
+document.getElementById('tab-reje').addEventListener('click',function(){
+
+  const show = document.getElementsByClassName('card')
+  for(let i =0; i < show.length; i++){
+        console.log(i);
+       show[i].style.display = "none";
+
+      const dekaReje = document.getElementsByClassName('reje');
+      for(let i = 0; i < dekaReje.length; i++){
+         dekaReje[i].style.display = 'block';
+      }
+
+}
+
+})
+
+// butomm///////////////////////
+const interbtn = document.getElementsByClassName('btn-interview');
+  
+   for(let i = 0; i < interbtn.length; i++ ){
+      interbtn[i].addEventListener('click', function(){
+         
+      const cardNo = this.closest('.card');
+      cardNo.classList.add('inter');
+
+      // console.log(1111111111);
+
+    const hide = document.getElementsByClassName('reje');
+            for(let k = 0; k < hide.length; k++){
+               hide[k].classList.remove('reje');
+            }
+
+
+      })
+   }
+
+
+
+
+   // reject////////
+   const rejectbtn = document.getElementsByClassName('btn-Rejected');
+   for(let y = 0; y < rejectbtn.length;y++){
+      rejectbtn[y].addEventListener('click', function(){
+          
+         const cardNo = this.closest('.card');
+      cardNo.classList.add('reje');
+            // console.log(22222);
+
+            const hide = document.getElementsByClassName('inter');
+            for(let k = 0; k < hide.length; k++){
+               hide[k].classList.remove('inter');
+            }
+
+
+
+      })
+   }
+
+
+// ///////tab buttom//
+const tabsBtn = document.getElementsByClassName('tab');
+for(let i = 0; i < tabsBtn.length; i++){
+   tabsBtn[i].addEventListener('click',function(){
+         for(let j = 0; j < tabsBtn.length; j++){
+         tabsBtn[j].classList.remove('tabActive');}
+         this.classList.add('tabActive');
+
+   })
+} */
