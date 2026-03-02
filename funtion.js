@@ -17,6 +17,8 @@ document.getElementById('tab-all').addEventListener('click',function(){
    all[i].style.display = "block";
   }
    
+  const noPost =document.getElementById('nopost');
+  noPost.style.display = "none";
 
 })
 
@@ -34,10 +36,14 @@ document.getElementById('tab-inter').addEventListener('click',function(){
          deka[j].style.display = "block";
       }
 
-      // const post = document.getElementsByClassName('not');
-      // for(let i = 0; i <= post.length; i++){
-      //    post[i].classList.add = 'block';
-      // }
+       const nopost = document.getElementById('nopost');
+       if(deka.length === 0){
+         nopost.style.display = "block";
+       }
+       else{
+                  nopost.style.display = "none";
+
+       }
 
 
 }
@@ -58,8 +64,20 @@ document.getElementById('tab-reje').addEventListener('click',function(){
       for(let i = 0; i < dekaReje.length; i++){
          dekaReje[i].style.display = 'block';
       }
+ 
+
+ const nopost = document.getElementById('nopost');
+       if(dekaReje.length===0 ){
+         nopost.style.display = "block";
+       }
+       else{
+          nopost.style.display = "none";
+
+       }
+
 
 }
+      
 
 })
 
@@ -71,12 +89,32 @@ const interbtn = document.getElementsByClassName('btn-interview');
          
       const cardNo = this.closest('.card');
       cardNo.classList.add('inter');
+            cardNo.classList.add('bbge');
+
       cardNo.classList.remove('reje');
+            cardNo.classList.remove('bbred');
 
-     updatecount()
+      // badge/////
+      
+      const badge = cardNo.getElementsByClassName('interbage')[0];
+       badge.style.display = "inline-block";
 
 
-      })
+       const badgereje = cardNo.getElementsByClassName('rejebage')[0];
+       badgereje.style.display = "none";
+
+       const notap = cardNo.getElementsByClassName('notapplied')[0];
+       notap.style.display = "none";
+      // end////
+
+
+
+     updatecount();
+
+
+      }
+   
+   )
       
    }
 
@@ -90,7 +128,29 @@ const interbtn = document.getElementsByClassName('btn-interview');
           
          const cardNo = this.closest('.card');
       cardNo.classList.add('reje');
+      cardNo.classList.add('bbred');
+
       cardNo.classList.remove('inter');
+
+cardNo.classList.remove('bbge');
+
+
+// bage
+   const badge = cardNo.getElementsByClassName('interbage')[0];
+       badge.style.display = "none";
+
+       const badgereje = cardNo.getElementsByClassName('rejebage')[0];
+       badgereje.style.display = "inline-block";
+
+       const notap = cardNo.getElementsByClassName('notapplied')[0];
+       notap.style.display = "none";
+
+
+
+
+// end
+
+
             updatecount()
 
 
@@ -120,6 +180,6 @@ function updatecount(){
 };
 
 
-
+// ////no post////
 
 
