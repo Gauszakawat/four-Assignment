@@ -180,6 +180,28 @@ function updatecount(){
 };
 
 
-// ////no post////
+// ////Delete icon////
+
+const deleteicon = document.getElementsByClassName('icon');
+for(let i = 0; i < deleteicon.length; i++){
+   deleteicon[i].addEventListener('click',function(){
+
+      const card = this.closest('.card');
+      card.remove();
+
+       updateTotalCount()
+
+   })
+}
 
 
+// 
+function updateTotalCount(){
+
+   const cards = document.getElementsByClassName('card');
+   const total = cards.length;
+
+   document.getElementById('Total-number').innerText = total;
+   document.getElementById('av-jobs-list').innerText = total;
+
+}
